@@ -1,7 +1,7 @@
 /**
  * Plugin modified by Yara Studer
  * - Added continue button that ends the trial
- * - TODO: Add configurable delay before showing continue button
+ * - Added configurable delay before enabling continue button
  * - Addded configurable text that appears above the continue button
  * - Pressing next on the last page no longer ends the trial
  */
@@ -73,7 +73,7 @@ var jsPsychInstructionsTimed = (function (jspsych) {
               pretty_name: "Button label next",
               default: "Next",
           },
-          /** Time in milliseconds to wait before showing continue button. If null, button is not shown. */
+          /** Time in milliseconds to wait before showing continue button*/
           continue_button_delay: {
             type: jspsych.ParameterType.INT,
             pretty_name: "Continue button delay",
@@ -89,7 +89,7 @@ var jsPsychInstructionsTimed = (function (jspsych) {
           instructions_text: {
               type: jspsych.ParameterType.STRING,
               pretty_name: "Instructions text",
-              default: "Click the button to continue.",
+              default: "Press the button to continue.",
           }
       },
   };
@@ -112,6 +112,7 @@ var jsPsychInstructionsTimed = (function (jspsych) {
           var view_history = [];
           var start_time = performance.now();
           var last_page_update_time = start_time;
+          var continue_disabled = true
           function btnListener(evt) {
               evt.target.removeEventListener("click", btnListener);
               if (this.id === "jspsych-instructions-back") {
@@ -175,21 +176,23 @@ var jsPsychInstructionsTimed = (function (jspsych) {
                   }
                   display_element.innerHTML = html;
               }
-              if (trial.continue_button_delay !== null) {
+              
               // Add continue button
-                html += "<p>" + trial.instructions_text + "</p>";
-                html +=
-                    "<button id='jspsych-instructions-continue' class='jspsych-btn'" +
-                        allowed +
-                        ">" +
-                        trial.button_label_continue +
-                        "</button>";
-                display_element.innerHTML = html;
-                if (true) {
-                    display_element
-                        .querySelector("#jspsych-instructions-continue")
-                        .addEventListener("click", btnListener);
-                }
+              html += "<p>" + trial.instructions_text + "</p>";
+              html +=
+                  "<button id='jspsych-instructions-continue' class='jspsych-btn'>" +
+                      trial.button_label_continue +
+                      "</button>";
+              display_element.innerHTML = html;
+              
+              display_element
+                  .querySelector("#jspsych-instructions-continue")
+                  .addEventListener("click", btnListener);
+
+              if (continue_disabled) {
+                  display_element.querySelector('#jspsych-instructions-continue').disabled = true;
+              } else {
+                  display_element.querySelector('#jspsych-instructions-continue').disabled = false;
               }
             }
           function next() {
@@ -244,6 +247,11 @@ var jsPsychInstructionsTimed = (function (jspsych) {
               }
           };
           show_current_page();
+
+          setTimeout(() => {
+              continue_disabled = false;
+              display_element.querySelector('#jspsych-instructions-continue').disabled = false;
+          }, trial.continue_button_delay);
 
           if (trial.allow_keys) {
               var keyboard_listener = this.jsPsych.pluginAPI.getKeyboardResponse({

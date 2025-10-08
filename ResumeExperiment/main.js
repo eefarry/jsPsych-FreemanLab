@@ -39,6 +39,7 @@ var resume = {
     key_backward: "ArrowUp",
     continue_button_delay: 5000,
     button_label_continue: "Continue",
+    instructions_text: "Use the up and down arrow keys to look through the resume. When you are done, click the button below to continue.",
     show_page_number: true,
 };
 
