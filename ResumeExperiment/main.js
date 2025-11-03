@@ -37,7 +37,7 @@ var resume = {
     pages: jsPsych.timelineVariable('stimulus'),
     key_forward: "ArrowDown",
     key_backward: "ArrowUp",
-    continue_button_delay: 5000,
+    continue_button_delay: 10000,
     button_label_continue: "Continue",
     instructions_text: "Use the up and down arrow keys to look through the resume. When you are done, click the button below to continue.",
     show_page_number: true,
@@ -56,8 +56,8 @@ var likert_scale = [
 // Create questions for each trait
 var rating_questions = config.traits.map(function(trait) {
   return {
-    prompt: `How ${trait} is this person?`,
-    name: trait,
+    prompt: `How ${trait.label} is this person?`,
+    name: trait.name,
     labels: likert_scale,
     required: true
   };
@@ -71,22 +71,22 @@ var rate = {
 };
 
 // Create array of resume stimuli
-var resumeStimuli = Array.from({length: config.trials}, (_, i) => i + 1).map(resumeID => {
+var resumeStimuli = jsPsych.randomization.shuffle(
+  Array.from({length: config.trials}, (_, i) => {
+    const resumeID = i + 1;
     const paddedID = String(resumeID).padStart(2, '0');
-    const imageGroup = [1, 2, 3, 4].map(pageNumber => {
-        return `<img src='imgs/Resume_${paddedID}_${pageNumber}.png' style='display: block; width: 75%; height: auto; margin-left: auto; margin-right: auto;'>`;
-    });
-    return { stimulus: imageGroup };
-});
+    const imageGroup = [1, 2, 3, 4].map(pageNumber =>
+      `<img src='imgs/Resume_${paddedID}_${pageNumber}.png' style='display:block;width:75%;height:auto;margin:0 auto;'>`
+    );
+    return { stimulus: imageGroup, resume_id: resumeID };
+  })
+);
 
 var fullTrial = {
-    timeline: [resume, rate],
-    timeline_variables: resumeStimuli,
-    sample: {
-        type: 'without-replacement',
-        size: 2
-    }
-}
+  timeline: [resume, rate],
+  timeline_variables: resumeStimuli
+};
+
 timeline.push(fullTrial);
 
 //END OF EXPERIMENT CONTENT
