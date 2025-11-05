@@ -3,7 +3,7 @@ const config = {
     experimentName: "Resume Experiment",
 
     //The instructions to be shown before the experiment begins
-    instructions: "You will be shown 10 resumes. After examining each one, you'll be asked to rate the candidate on several traits. Use the up and down arrow keys to scroll through the four sections of each resume. After 10 seconds, a \"Continue\" button will appear, allowing you to proceed to the rating questions.",
+    instructions: "You will be shown 25 resumes. After examining each one, you'll be asked to rate the candidate on several traits. Use the up and down arrow keys to scroll through the four sections of each resume. After 10 seconds, a \"Continue\" button will appear, allowing you to proceed to the rating questions.",
     //The number of trials (and resumes)
     trials: 2,
 

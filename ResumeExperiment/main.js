@@ -33,14 +33,24 @@ var instructions = {
 timeline.push(instructions);
 
 var resume = {
-    type: jsPsychInstructionsTimed,
-    pages: jsPsych.timelineVariable('stimulus'),
-    key_forward: "ArrowDown",
-    key_backward: "ArrowUp",
-    continue_button_delay: 10000,
-    button_label_continue: "Continue",
-    instructions_text: "Use the up and down arrow keys to look through the resume. When you are done, click the button below to continue.",
-    show_page_number: true,
+  type: jsPsychInstructionsTimed,
+  pages: jsPsych.timelineVariable('stimulus'),
+  key_forward: "ArrowDown",
+  key_backward: "ArrowUp",
+  continue_button_delay: 10000,
+  button_label_continue: "Continue",
+  instructions_text: "Use the up and down arrow keys to look through the resume. When you are done, click the button below to continue.",
+  show_page_number: true,
+  render_on_load: true,
+
+  on_finish: function(data){
+    const pagesSeen = new Set(data.view_history.map(v => v.page_index));
+    const seenAll = pagesSeen.size >= 4;
+    const waitedLongEnough = data.rt >= 10000;
+    if (!seenAll || !waitedLongEnough){
+      jsPsych.timelineVariable('stimulus').repeatTrial = true;
+    }
+  }
 };
 
 var likert_scale = [
@@ -70,17 +80,28 @@ var rate = {
     scale_width: 500
 };
 
-// Create array of resume stimuli
+const testFolder = Math.random() < 0.5 ? "Test_1" : "Test_2";
+
+const startIndex = testFolder === "Test_1" ? 1 : 26;
+const totalResumes = 25;
+
+console.log("Participant assigned to:", testFolder, "starting at", startIndex);
+
 var resumeStimuli = jsPsych.randomization.shuffle(
-  Array.from({length: config.trials}, (_, i) => {
-    const resumeID = i + 1;
-    const paddedID = String(resumeID).padStart(2, '0');
-    const imageGroup = [1, 2, 3, 4].map(pageNumber =>
-      `<img src='imgs/Resume_${paddedID}_${pageNumber}.png' style='display:block;width:75%;height:auto;margin:0 auto;'>`
-    );
-    return { stimulus: imageGroup, resume_id: resumeID };
+  Array.from({ length: totalResumes }, (_, i) => {
+    const resumeID = startIndex + i;
+    const paddedID = String(resumeID).padStart(2, "0");
+
+    const imageGroup = [1, 2, 3, 4].map(pageNumber => `
+      <img src="imgs/${testFolder}/Resume_${paddedID}_${pageNumber}.png"
+           style="display:block;width:75%;height:auto;margin:0 auto;"
+           alt="Resume page ${pageNumber}">
+    `);
+
+    return { stimulus: imageGroup, resume_id: `${testFolder}_${paddedID}` };
   })
 );
+
 
 var fullTrial = {
   timeline: [resume, rate],
