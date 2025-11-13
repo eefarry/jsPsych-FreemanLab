@@ -1,5 +1,5 @@
 //Debug mode - enable this to skip consent and demogrphic forms
-var debug = true;
+var debug = false;
 
 //Initialize
 var sub_id = Math.random().toString().substr(2, 15); // generate random 15 digit number
