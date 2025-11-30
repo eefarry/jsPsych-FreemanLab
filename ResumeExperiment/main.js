@@ -81,26 +81,40 @@ var rate = {
 };
 
 const testFolder = Math.random() < 0.5 ? "Test_1" : "Test_2";
-
 const startIndex = testFolder === "Test_1" ? 1 : 26;
 const totalResumes = 25;
 
 console.log("Participant assigned to:", testFolder, "starting at", startIndex);
 
-var resumeStimuli = jsPsych.randomization.shuffle(
-  Array.from({ length: totalResumes }, (_, i) => {
-    const resumeID = startIndex + i;
-    const paddedID = String(resumeID).padStart(2, "0");
+let resumeStimuli = Array.from({ length: totalResumes }, (_, i) => {
+  const resumeID = startIndex + i;
+  const paddedID = String(resumeID).padStart(2, "0");
 
-    const imageGroup = [1, 2, 3, 4].map(pageNumber => `
-      <img src="imgs/${testFolder}/Resume_${paddedID}_${pageNumber}.png"
-           style="display:block;width:75%;height:auto;margin:0 auto;"
-           alt="Resume page ${pageNumber}">
-    `);
+  const imageGroup = [1, 2, 3, 4].map(pageNumber => `
+    <img src="imgs/${testFolder}/Resume_${paddedID}_${pageNumber}.png"
+         style="display:block;width:75%;height:auto;margin:0 auto;"
+         alt="Resume page ${pageNumber}">
+  `);
 
-    return { stimulus: imageGroup, resume_id: `${testFolder}_${paddedID}` };
-  })
-);
+  return { stimulus: imageGroup, resume_id: `${testFolder}_${paddedID}` };
+});
+
+resumeStimuli = jsPsych.randomization.shuffle(resumeStimuli);
+
+resumeStimuli = resumeStimuli.map((trial, idx) => {
+  const header = `
+    <div style="text-align:center; margin-bottom: 8px; font-weight: 600;">
+      Resume ${idx + 1} of ${totalResumes}
+    </div>
+  `;
+
+  const imageGroupWithHeader = trial.stimulus.map(pageHtml => header + pageHtml);
+
+  return {
+    ...trial,
+    stimulus: imageGroupWithHeader
+  };
+});
 
 
 var fullTrial = {
