@@ -5,8 +5,12 @@ var debug = true;
 var sub_id = Math.random().toString().substr(2, 15); // generate random 15 digit number
 var jsPsych = initJsPsych({
     on_finish: function () {
-        const data = jsPsych.data.get().csv();
-        saveData(data); // send CSV to server
+        //Local save (debugging)
+        jsPsych.data.get().localSave("csv", "sub-" + sub_id + "_data.csv");
+
+        // // Send CSV to server (WIP)
+        // const data = jsPsych.data.get().csv();
+        // saveData(data);
 
         // Show Prolific completion message
         jsPsych.endExperiment(`<p>Thanks for participating!</p>
@@ -52,15 +56,7 @@ var resume = {
     button_label_continue: "Continue",
     instructions_text: "Use the up and down arrow keys to look through the resume. When you are done, click the button below to continue.",
     show_page_number: true,
-    render_on_load: true,
-    on_finish: function (data) {
-        const pagesSeen = new Set(data.view_history.map(v => v.page_index));
-        const seenAll = pagesSeen.size >= 4;
-        const waitedLongEnough = data.rt >= 10000;
-        if (!seenAll || !waitedLongEnough) {
-            jsPsych.timelineVariable('stimulus').repeatTrial = true;
-        }
-    }
+    render_on_load: true
 };
 
 var likert_scale = [
@@ -92,7 +88,7 @@ var rate = {
 
 const testFolder = Math.random() < 0.5 ? "Test_1" : "Test_2";
 const startIndex = testFolder === "Test_1" ? 1 : 26;
-const totalResumes = 25;
+const totalResumes = 1;
 
 console.log("Participant assigned to:", testFolder, "starting at", startIndex);
 

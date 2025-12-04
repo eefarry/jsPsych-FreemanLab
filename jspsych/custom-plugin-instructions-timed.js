@@ -110,6 +110,7 @@ var jsPsychInstructionsTimed = (function (jspsych) {
       trial(display_element, trial) {
           var current_page = 0;
           var view_history = [];
+          var pages_seen = new Set();
           var start_time = performance.now();
           var last_page_update_time = start_time;
           var continue_disabled = true
@@ -126,6 +127,7 @@ var jsPsychInstructionsTimed = (function (jspsych) {
               }
           }
           function show_current_page() {
+              pages_seen.add(current_page)
               var html = trial.pages[current_page];
               var pagenum_display = "";
               if (trial.show_page_number) {
@@ -189,7 +191,7 @@ var jsPsychInstructionsTimed = (function (jspsych) {
                   .querySelector("#jspsych-instructions-continue")
                   .addEventListener("click", btnListener);
 
-              if (continue_disabled) {
+              if (continue_disabled || pages_seen.size != trial.pages.length) {
                   display_element.querySelector('#jspsych-instructions-continue').disabled = true;
               } else {
                   display_element.querySelector('#jspsych-instructions-continue').disabled = false;
@@ -250,7 +252,9 @@ var jsPsychInstructionsTimed = (function (jspsych) {
 
           setTimeout(() => {
               continue_disabled = false;
-              display_element.querySelector('#jspsych-instructions-continue').disabled = false;
+              if (pages_seen.size == trial.pages.length) {
+                display_element.querySelector('#jspsych-instructions-continue').disabled = false;
+              }
           }, trial.continue_button_delay);
 
           if (trial.allow_keys) {
