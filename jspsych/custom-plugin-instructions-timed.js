@@ -217,6 +217,7 @@ var jsPsychInstructionsTimed = (function (jspsych) {
               last_page_update_time = current_time;
           }
           const endTrial = () => {
+              add_current_page_to_view_history();
               if (trial.allow_keys) {
                   this.jsPsych.pluginAPI.cancelKeyboardResponse(keyboard_listener);
               }
