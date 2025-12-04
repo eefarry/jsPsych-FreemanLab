@@ -88,7 +88,7 @@ var rate = {
 
 const testFolder = Math.random() < 0.5 ? "Test_1" : "Test_2";
 const startIndex = testFolder === "Test_1" ? 1 : 26;
-const totalResumes = 1;
+const totalResumes = 25;
 
 console.log("Participant assigned to:", testFolder, "starting at", startIndex);
 
