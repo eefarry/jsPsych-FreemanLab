@@ -3,7 +3,7 @@ export function pushConsentForm(jsPsych, timeline) {
   const consent = {
     type: jsPsychHtmlButtonResponse,
     stimulus: `
-      <div style="max-width: 800px; margin: 0 auto; text-align: left;">
+      <div style="max-width: 800px; margin: 0 auto; text-align: center;">
         <h1>Consent to Participate</h1>
 
         <p><strong>(Please scroll down to read all information.)</strong></p>
