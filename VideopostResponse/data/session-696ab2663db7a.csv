@@ -1,0 +1,89 @@
+"rt","stimulus","response","trial_type","trial_index","time_elapsed","internal_node_id","subject","date","time","prolificID","group","video_number","video_file","question_order"
+"6351","
+      <div style=""max-width: 800px; margin: 0 auto; text-align: left;"">
+        <h1>Consent to Participate</h1>
+
+        <p><strong>(Please scroll down to read all information.)</strong></p>
+        
+        <div style=""
+          max-height: 300px;
+          overflow-y: scroll;
+          border: 1px solid #ccc;
+          padding: 15px;
+          margin-bottom: 20px;
+        "">
+
+        <p>
+          This research study is being conducted by researchers from
+          <strong>Columbia University</strong>.
+        </p>
+
+        <p>
+          The purpose of this study is to get your impressions of people talking about themselves.
+        </p>
+
+        <p>
+          Participation involves watching and responding to videos.
+        </p>
+
+        <p>
+          Some materials may contain emotional content. If you feel uncomfortable,
+          you may stop participating at any time without penalty.
+        </p>
+
+        <p>
+          Your data will be collected anonymously and used only for research purposes.
+        </p>
+
+        <p>
+          If you have questions, you may contact the research team at
+          <a href=""mailto:columbia.freemanlab@gmail.com"">
+            columbia.freemanlab@gmail.com</a>.
+        </p>
+        </div>
+
+        <p><strong>Do you consent to participate in this study?</strong></p>
+      </div>
+    ","0","html-button-response","0","6361","0.0-0.0","rmcvjkvxuhdqgwq","16-01-2026","16:22:17","unknown","Group_1","","",""
+"12426","
+        You will watch <strong>6 videos</strong> of people talking about themselves.<br><br>
+        After each video, you will be asked to respond with:
+        <br>• Their personality
+        <br>• The emotions or mental states they experienced
+    ","0","html-button-response","1","18788","0.0-1.0","rmcvjkvxuhdqgwq","16-01-2026","16:22:17","unknown","Group_1","","",""
+"49356","
+        <p>
+            A <strong>personality trait</strong> might be <i>funny</i> or <i>honest</i>.
+        </p>
+
+        <p>
+            An <strong>emotion or mental state</strong> might be <i>embarrassment</i>,
+            <i>happiness</i>, or <i>indifference</i>.
+        </p>
+
+        <p>
+            <strong>Please list all traits, emotions, and mental states that came to mind
+            at <u>any point</u> during the video.</strong>
+        </p>
+
+        <p>
+            Do <u>not</u> give only a single overall impression. If your impressions
+            changed over time, include <strong>everything you noticed</strong>, even if
+            it only occurred briefly.
+        </p>
+    ","0","html-button-response","2","68145","0.0-2.0","rmcvjkvxuhdqgwq","16-01-2026","16:22:17","unknown","Group_1","","",""
+"null","[""movies/Cringe.mp4""]","null","video-keyboard-response","3","189141","0.0-3.0","rmcvjkvxuhdqgwq","16-01-2026","16:22:17","unknown","Group_1","1","movies/Cringe.mp4",""
+"215216","","{""personality_traits"":""Honest, straight forward"",""emotions_mental_states"":""Sadness, disbelief""}","survey-text","4","404375","0.0-4.0","rmcvjkvxuhdqgwq","16-01-2026","16:22:17","unknown","Group_1","1","movies/Cringe.mp4",""
+"null","[""movies/Aging.mp4""]","null","video-keyboard-response","5","525538","0.0-5.0","rmcvjkvxuhdqgwq","16-01-2026","16:22:17","unknown","Group_1","2","movies/Aging.mp4",""
+"100815","","{""personality_traits"":""joyful, proud, objective, honest"",""emotions_mental_states"":""forward looking, happy, bright""}","survey-text","6","626356","0.0-6.0","rmcvjkvxuhdqgwq","16-01-2026","16:22:17","unknown","Group_1","2","movies/Aging.mp4",""
+"null","[""movies/HardMode.mp4""]","null","video-keyboard-response","7","747829","0.0-7.0","rmcvjkvxuhdqgwq","16-01-2026","16:22:17","unknown","Group_1","3","movies/HardMode.mp4",""
+"213481","","{""personality_traits"":""forward looking, hopeful, I can do it, "",""emotions_mental_states"":""why not me, can do it, stressfulness""}","survey-text","8","961313","0.0-8.0","rmcvjkvxuhdqgwq","16-01-2026","16:22:17","unknown","Group_1","3","movies/HardMode.mp4",""
+"null","[""movies/Attraction.mp4""]","null","video-keyboard-response","9","1082491","0.0-9.0","rmcvjkvxuhdqgwq","16-01-2026","16:22:17","unknown","Group_1","4","movies/Attraction.mp4",""
+"63447","","{""personality_traits"":""Honest, truthful"",""emotions_mental_states"":""Happy, peaceful, fulfilled""}","survey-text","10","1145941","0.0-10.0","rmcvjkvxuhdqgwq","16-01-2026","16:22:17","unknown","Group_1","4","movies/Attraction.mp4",""
+"null","[""movies/Travelling.mp4""]","null","video-keyboard-response","11","1267114","0.0-11.0","rmcvjkvxuhdqgwq","16-01-2026","16:22:17","unknown","Group_1","5","movies/Travelling.mp4",""
+"82840","","{""personality_traits"":""Honest, confident, traveler"",""emotions_mental_states"":""Happy, forward looking, inviting, ""}","survey-text","12","1349956","0.0-12.0","rmcvjkvxuhdqgwq","16-01-2026","16:22:17","unknown","Group_1","5","movies/Travelling.mp4",""
+"null","[""movies/Music.mp4""]","null","video-keyboard-response","13","1470923","0.0-13.0","rmcvjkvxuhdqgwq","16-01-2026","16:22:17","unknown","Group_1","6","movies/Music.mp4",""
+"123618","","{""personality_traits"":""Straightforward, honest, experimental,  "",""emotions_mental_states"":""Happy, hopeful""}","survey-text","14","1594545","0.0-14.0","rmcvjkvxuhdqgwq","16-01-2026","16:22:17","unknown","Group_1","6","movies/Music.mp4",""
+"5456","","{""age"":""74""}","survey-text","15","1600003","0.0-15.0","rmcvjkvxuhdqgwq","16-01-2026","16:22:17","unknown","Group_1","","",""
+"23665","","{""race"":""Black or African-American"",""hispanic"":""Not Hispanic or Latino"",""gender"":""Male"",""sexOrientation"":""Heterosexual or straight"",""education"":""Master's degree""}","survey-multi-choice","16","1623671","0.0-16.0","rmcvjkvxuhdqgwq","16-01-2026","16:22:17","unknown","Group_1","","","[0,1,2,3,4]"
+"4382","You've finished the last task. Click the button to end the study.","0","html-button-response","17","1628055","0.0-17.0","rmcvjkvxuhdqgwq","16-01-2026","16:22:17","unknown","Group_1","","",""

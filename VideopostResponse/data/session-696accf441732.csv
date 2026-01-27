@@ -1,0 +1,89 @@
+"rt","stimulus","response","trial_type","trial_index","time_elapsed","internal_node_id","subject","date","time","prolificID","group","video_number","video_file","question_order"
+"3666","
+      <div style=""max-width: 800px; margin: 0 auto; text-align: left;"">
+        <h1>Consent to Participate</h1>
+
+        <p><strong>(Please scroll down to read all information.)</strong></p>
+        
+        <div style=""
+          max-height: 300px;
+          overflow-y: scroll;
+          border: 1px solid #ccc;
+          padding: 15px;
+          margin-bottom: 20px;
+        "">
+
+        <p>
+          This research study is being conducted by researchers from
+          <strong>Columbia University</strong>.
+        </p>
+
+        <p>
+          The purpose of this study is to get your impressions of people talking about themselves.
+        </p>
+
+        <p>
+          Participation involves watching and responding to videos.
+        </p>
+
+        <p>
+          Some materials may contain emotional content. If you feel uncomfortable,
+          you may stop participating at any time without penalty.
+        </p>
+
+        <p>
+          Your data will be collected anonymously and used only for research purposes.
+        </p>
+
+        <p>
+          If you have questions, you may contact the research team at
+          <a href=""mailto:columbia.freemanlab@gmail.com"">
+            columbia.freemanlab@gmail.com</a>.
+        </p>
+        </div>
+
+        <p><strong>Do you consent to participate in this study?</strong></p>
+      </div>
+    ","0","html-button-response","0","3802","0.0-0.0","j6qxaf0not8m6u5","16-01-2026","15:21:57","unknown","Group_1","","",""
+"30824","
+        You will watch <strong>6 videos</strong> of people talking about themselves.<br><br>
+        After each video, you will be asked to respond with:
+        <br>• Their personality
+        <br>• The emotions or mental states they experienced
+    ","0","html-button-response","1","34646","0.0-1.0","j6qxaf0not8m6u5","16-01-2026","15:21:57","unknown","Group_1","","",""
+"5425","
+        <p>
+            A <strong>personality trait</strong> might be <i>funny</i> or <i>honest</i>.
+        </p>
+
+        <p>
+            An <strong>emotion or mental state</strong> might be <i>embarrassment</i>,
+            <i>happiness</i>, or <i>indifference</i>.
+        </p>
+
+        <p>
+            <strong>Please list all traits, emotions, and mental states that came to mind
+            at <u>any point</u> during the video.</strong>
+        </p>
+
+        <p>
+            Do <u>not</u> give only a single overall impression. If your impressions
+            changed over time, include <strong>everything you noticed</strong>, even if
+            it only occurred briefly.
+        </p>
+    ","0","html-button-response","2","40077","0.0-2.0","j6qxaf0not8m6u5","16-01-2026","15:21:57","unknown","Group_1","","",""
+"null","[""movies/Cringe.mp4""]","null","video-keyboard-response","3","164776","0.0-3.0","j6qxaf0not8m6u5","16-01-2026","15:21:57","unknown","Group_1","1","movies/Cringe.mp4",""
+"66144","","{""personality_traits"":""she was very honest, she seemed to lack confidence."",""emotions_mental_states"":""It seemed that she suffers from depression, and is now somewhat introverted.""}","survey-text","4","231223","0.0-4.0","j6qxaf0not8m6u5","16-01-2026","15:21:57","unknown","Group_1","1","movies/Cringe.mp4",""
+"null","[""movies/Music.mp4""]","null","video-keyboard-response","5","353939","0.0-5.0","j6qxaf0not8m6u5","16-01-2026","15:21:57","unknown","Group_1","2","movies/Music.mp4",""
+"68633","","{""personality_traits"":""I thought he was funny and quirky. He was honest and had a friendly persona."",""emotions_mental_states"":""He was a little awkward but overall emanated a certain positivity.""}","survey-text","6","422601","0.0-6.0","j6qxaf0not8m6u5","16-01-2026","15:21:57","unknown","Group_1","2","movies/Music.mp4",""
+"null","[""movies/HardMode.mp4""]","null","video-keyboard-response","7","544876","0.0-7.0","j6qxaf0not8m6u5","16-01-2026","15:21:57","unknown","Group_1","3","movies/HardMode.mp4",""
+"101012","","{""personality_traits"":""He's very honest and philosophical."",""emotions_mental_states"":""I think he suffers a little from a depreciated sense of self worth that he feels he has not overachieve to compensate for.""}","survey-text","8","645905","0.0-8.0","j6qxaf0not8m6u5","16-01-2026","15:21:57","unknown","Group_1","3","movies/HardMode.mp4",""
+"null","[""movies/Attraction.mp4""]","null","video-keyboard-response","9","768780","0.0-9.0","j6qxaf0not8m6u5","16-01-2026","15:21:57","unknown","Group_1","4","movies/Attraction.mp4",""
+"82846","","{""personality_traits"":""she was very upbeat, honest, and demonstrated some emotional depth."",""emotions_mental_states"":""She seemed very happy and positive.""}","survey-text","10","851639","0.0-10.0","j6qxaf0not8m6u5","16-01-2026","15:21:57","unknown","Group_1","4","movies/Attraction.mp4",""
+"null","[""movies/Aging.mp4""]","null","video-keyboard-response","11","973944","0.0-11.0","j6qxaf0not8m6u5","16-01-2026","15:21:57","unknown","Group_1","5","movies/Aging.mp4",""
+"50444","","{""personality_traits"":""she was funny and honest. "",""emotions_mental_states"":""she seemed a little obsessed about aging although it seemed she was doing her best to work through it.""}","survey-text","12","1024412","0.0-12.0","j6qxaf0not8m6u5","16-01-2026","15:21:57","unknown","Group_1","5","movies/Aging.mp4",""
+"null","[""movies/Travelling.mp4""]","null","video-keyboard-response","13","1147403","0.0-13.0","j6qxaf0not8m6u5","16-01-2026","15:21:57","unknown","Group_1","6","movies/Travelling.mp4",""
+"78596","","{""personality_traits"":""He seemed very fun and willing to experience life from different perspectives through travel."",""emotions_mental_states"":""He seemed very happy and positive.""}","survey-text","14","1226026","0.0-14.0","j6qxaf0not8m6u5","16-01-2026","15:21:57","unknown","Group_1","6","movies/Travelling.mp4",""
+"5931","","{""age"":""51""}","survey-text","15","1232275","0.0-15.0","j6qxaf0not8m6u5","16-01-2026","15:21:57","unknown","Group_1","","",""
+"12267","","{""race"":""White"",""hispanic"":""Not Hispanic or Latino"",""gender"":""Male"",""sexOrientation"":""Heterosexual or straight"",""education"":""Some College""}","survey-multi-choice","16","1244555","0.0-16.0","j6qxaf0not8m6u5","16-01-2026","15:21:57","unknown","Group_1","","","[0,1,2,3,4]"
+"2065","You've finished the last task. Click the button to end the study.","0","html-button-response","17","1246628","0.0-17.0","j6qxaf0not8m6u5","16-01-2026","15:21:57","unknown","Group_1","","",""
