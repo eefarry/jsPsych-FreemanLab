@@ -1,3 +1,6 @@
+# ARCHIVED
+This repository has been archived and is read-only. It contains deprecated jsPsych templates and studies using jsPsych v7.
+
 # Introduction
 Welcome! [jsPsych](https://www.jspsych.org/7.3/) is a great tool for conducting online (and in person) experiments. More and more psychologists have begun using it - it’s almost at 1k stars on GitHub! Implementing it on our server is also super straightforward and easy to use (and already set up). 
 
